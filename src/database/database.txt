@@ -1,0 +1,34 @@
+Users table: This table stores user account information, such as email, password (hashed and salted), and a unique user ID.
+CREATE TABLE users (
+username TEXT PRIMARY KEY,
+password TEXT
+);
+
+Income table: This table stores income information for each user, such as income amount, income source, and income date.
+CREATE TABLE income (
+id INTEGER PRIMARY KEY,
+username TEXT,
+amount REAL,
+source TEXT,
+month TEXT,
+FOREIGN KEY(username) REFERENCES users(username)
+);
+
+Expenses table: This table stores expense information for each user, such as expense amount, expense category, and expense date.
+CREATE TABLE expenses (
+id INTEGER PRIMARY KEY,
+username TEXT,
+amount REAL,
+category TEXT,
+month TEXT,
+FOREIGN KEY(username) REFERENCES users(username)
+);
+
+Savings table: This table stores savings goal information for each user, such as savings goal amount and savings goal target date.
+CREATE TABLE savings (
+id INTEGER PRIMARY KEY,
+username TEXT,
+goal_amount REAL,
+month TEXT,
+FOREIGN KEY(username) REFERENCES users(username)
+);

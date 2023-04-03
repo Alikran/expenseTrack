@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="795.0" maxWidth="869.0" minHeight="795.0" minWidth="869.0" prefHeight="795.0" prefWidth="869.0" style="-fx-background-color: #1C4E80;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.expensetrack.mainpageController">
+   <children>
+      <VBox layoutX="-2.0" layoutY="1.0" prefHeight="795.0" prefWidth="870.0">
+         <children>
+            <VBox>
+               <children>
+                  <MenuBar prefHeight="4.0" prefWidth="870.0">
+                    <menus>
+                      <Menu fx:id="homeMenu" mnemonicParsing="false" text="Home">
+                           <items>
+                              <MenuItem fx:id="homeMenuItem" mnemonicParsing="false" text="Homescreen" />
+                           </items></Menu>
+                      <Menu fx:id="incomeMenu" mnemonicParsing="false" text="Income">
+                           <items>
+                              <MenuItem fx:id="incomeMenuItem" mnemonicParsing="false" text="View Income" />
+                           </items></Menu>
+                      <Menu fx:id="expenseMenu" mnemonicParsing="false" text="Expenses">
+                           <items>
+                              <MenuItem fx:id="expenseMenuItem" mnemonicParsing="false" text="View Expenses" />
+                           </items></Menu>
+                        <Menu fx:id="savingsMenu" mnemonicParsing="false" text="Savings">
+                           <items>
+                              <MenuItem fx:id="savingsMenuItem" mnemonicParsing="false" text="View Savings" />
+                           </items></Menu>
+                        <Menu fx:id="howToUseMenu" mnemonicParsing="false" text="How to use">
+                           <items>
+                              <MenuItem fx:id="instructionMenu" mnemonicParsing="false" text="Instructions" />
+                           </items></Menu>
+                        <Menu fx:id="exitMenu" mnemonicParsing="false" text="Exit">
+                           <items>
+                              <MenuItem fx:id="exitMenu" mnemonicParsing="false" text="Exit app" />
+                           </items></Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="83.0" prefWidth="874.0">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="294.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/pocket_pal.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="250.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ComboBox fx:id="monthSelectBox" prefHeight="26.0" prefWidth="246.0" promptText="Please select month">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="773.0" prefWidth="870.0">
+               <children>
+                  <SplitPane dividerPositions="0.5009208103130754" prefHeight="227.0" prefWidth="873.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5030555555555555" layoutY="-1.0" orientation="VERTICAL" prefHeight="721.0" prefWidth="432.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" layoutX="172.0" layoutY="80.0" prefHeight="359.2" prefWidth="413.0" style="-fx-background-color: #7E909A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="428.0" text="Income" textFill="WHITE" underline="true">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold Italic" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <PieChart fx:id="incomePChart" labelsVisible="false" prefHeight="233.0" prefWidth="400.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="426.0">
+                                       <children>
+                                          <VBox layoutX="165.0" layoutY="48.0" prefHeight="355.2" prefWidth="430.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="54.0" prefWidth="430.0" text="Savings" textFill="#1c4e80" underline="true">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold Italic" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5036420395421436" layoutX="3.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="722.0" prefWidth="430.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="345.0" prefWidth="426.0">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" layoutX="164.0" layoutY="61.0" prefHeight="360.0" prefWidth="428.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="46.0" prefWidth="429.0" text="Expenses" textFill="#1c4e80" underline="true">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold Italic" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <VBox layoutX="164.0" layoutY="61.0" prefHeight="355.2" prefWidth="428.8" style="-fx-background-color: #7E909A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="54.0" prefWidth="428.0" text="Goal" textFill="#fffefe" underline="true">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold Italic" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

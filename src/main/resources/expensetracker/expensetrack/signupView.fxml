@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.expensetrack.signupController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutY="-2.0" prefHeight="406.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #1F3F49;">
+               <children>
+                  <VBox alignment="CENTER" layoutX="4.0" layoutY="3.0" prefHeight="398.0" prefWidth="168.0">
+                     <children>
+                        <Label text="Your" textFill="#a5d8dd">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" text=" Money's" textFill="#a5d8dd">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="194.0" fitWidth="153.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/pocky.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Best" textFill="#a5d8dd">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="91.0" text="Friend" textFill="#a5d8dd">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #F1F1F1;">
+               <children>
+                  <VBox layoutX="1.0" layoutY="3.0" prefHeight="404.0" prefWidth="418.0">
+                     <children>
+                        <ImageView fitHeight="106.0" fitWidth="417.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/pocket_pal.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label fx:id="errorLabel" alignment="CENTER" prefHeight="34.0" prefWidth="416.0" text="Please enter username and password" textAlignment="CENTER">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <GridPane prefHeight="30.0" prefWidth="405.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.2000732421875" minWidth="10.0" prefWidth="139.200048828125" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.99995117187507" minWidth="10.0" prefWidth="279.99995117187507" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="31.0" prefWidth="150.0" text="Username:" textFill="#1f3f49" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="24.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="usernameText" prefHeight="26.0" prefWidth="235.0" promptText="Please enter username" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="20.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.199951171875" minWidth="10.0" prefWidth="142.3999267578125" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.8000732421875" minWidth="10.0" prefWidth="276.8000732421875" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="TOP_RIGHT" text="Password:" textFill="#1f3f49" underline="true">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="24.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <PasswordField fx:id="passwordTxt" prefHeight="26.0" prefWidth="274.0" promptText="Please enter password" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="20.0" />
+                                 </GridPane.margin>
+                              </PasswordField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="createAccountBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="194.0" style="-fx-background-color: #1F3F49;" text="Create Account" textFill="#a5d8dd">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="backBtn" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" style="-fx-background-color: #1F3F49;" text="Back" textFill="#a5d8dd">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label fx:id="errorOrCreateLbl" alignment="CENTER" prefHeight="32.0" prefWidth="416.0" textAlignment="CENTER">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
